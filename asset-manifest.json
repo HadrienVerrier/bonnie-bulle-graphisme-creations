@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/bonnie-bulle-graphisme-creations/static/css/main.e9a1b3b3.chunk.css",
+    "main.js": "/bonnie-bulle-graphisme-creations/static/js/main.603b6446.chunk.js",
+    "main.js.map": "/bonnie-bulle-graphisme-creations/static/js/main.603b6446.chunk.js.map",
+    "runtime-main.js": "/bonnie-bulle-graphisme-creations/static/js/runtime-main.2d723b26.js",
+    "runtime-main.js.map": "/bonnie-bulle-graphisme-creations/static/js/runtime-main.2d723b26.js.map",
+    "static/js/2.d8797bf6.chunk.js": "/bonnie-bulle-graphisme-creations/static/js/2.d8797bf6.chunk.js",
+    "static/js/2.d8797bf6.chunk.js.map": "/bonnie-bulle-graphisme-creations/static/js/2.d8797bf6.chunk.js.map",
+    "index.html": "/bonnie-bulle-graphisme-creations/index.html",
+    "static/css/main.e9a1b3b3.chunk.css.map": "/bonnie-bulle-graphisme-creations/static/css/main.e9a1b3b3.chunk.css.map",
+    "static/js/2.d8797bf6.chunk.js.LICENSE.txt": "/bonnie-bulle-graphisme-creations/static/js/2.d8797bf6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2d723b26.js",
+    "static/js/2.d8797bf6.chunk.js",
+    "static/css/main.e9a1b3b3.chunk.css",
+    "static/js/main.603b6446.chunk.js"
+  ]
+}
