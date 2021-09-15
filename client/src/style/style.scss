@@ -1,0 +1,40 @@
+@import "./reset.css";
+@import "./settings";
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	//FONT
+	font-size: 1.4rem;
+	font-family: $lato;
+	color: $black;
+
+	.App {
+		//HEADER
+		@import "./components/header";
+
+		//FOOTER
+		@import "./components/footer";
+
+		//BORDER
+		border: 3rem solid lighten($pink, 15%);
+		min-height: calc(100vh - 6rem);
+
+		.body-page {
+			min-height: calc(100vh - 6rem - 25rem);
+		}
+	}
+
+	//CLASSES AND GLOBALS
+
+	a {
+		text-decoration: none;
+		color: $black;
+
+		&.active {
+			color: $pink;
+		}
+	}
+}
