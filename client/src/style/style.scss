@@ -19,16 +19,33 @@ body {
 		@import "./components/footer";
 
 		//BORDER
-		border: 3rem solid lighten($pink, 15%);
+		border: 3rem solid lighten($pink, 20%);
 		min-height: calc(100vh - 6rem);
 
 		.body-page {
 			min-height: calc(100vh - 6rem - 25rem);
 		}
+
+		//PAGES
+		@import "./pages/infos";
 	}
 
-	//CLASSES AND GLOBALS
+	// GLOBALS
 
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: $roboto;
+		font-weight: 900;
+		color: $black !important;
+	}
+
+	strong {
+		font-weight: bolder;
+	}
 	a {
 		text-decoration: none;
 		color: $black;
@@ -36,5 +53,11 @@ body {
 		&.active {
 			color: $pink;
 		}
+	}
+
+	//CLASSES
+	.container {
+		width: 70%;
+		margin: auto;
 	}
 }

@@ -8,6 +8,7 @@ import {
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Home from "../pages/Home";
+import Infos from "../pages/Infos";
 
 const Routes = () => {
 	return (
@@ -16,6 +17,7 @@ const Routes = () => {
 			<main className="body-page">
 				<Switch>
 					<Route exact path="/" component={Home} />
+					<Route exact path="/infos" component={Infos} />
 					<Redirect to="/" />
 				</Switch>
 			</main>

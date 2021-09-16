@@ -1,0 +1,94 @@
+.infos {
+	> article {
+		border-bottom: 0.1px rgba(128, 128, 128, 0.39) solid;
+		padding-bottom: 3rem;
+		&:not(:first-of-type) {
+			margin-top: 3rem;
+		}
+	}
+	.bio {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		.column {
+			width: 80%;
+			margin: 3rem auto;
+		}
+
+		h2 {
+			font-size: 2.5rem;
+			letter-spacing: 1.4rem;
+			font-weight: 500;
+		}
+		h3 {
+			font-weight: lighter;
+			margin: 1.2rem auto 5rem;
+		}
+		p {
+			line-height: 3rem;
+		}
+		picture {
+			img {
+				border-radius: 50%;
+				width: calc(100% - 10rem);
+				max-width: 50rem;
+				margin: 5rem;
+			}
+		}
+	}
+
+	.cv {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		section {
+			margin: 0 8rem;
+			h4 {
+				font-size: 2.5rem;
+				font-weight: 500;
+				margin-bottom: 4rem;
+			}
+
+			&.realisations {
+				ul {
+					margin-left: 2rem;
+					li {
+						margin-bottom: 3rem;
+						position: relative;
+						&::before {
+							content: "✴";
+
+							position: absolute;
+							left: -2.8rem;
+							top: -0.5rem;
+							font-size: 2.5rem;
+						}
+					}
+				}
+			}
+			&.studies {
+				ul {
+					li {
+						margin-bottom: 5rem;
+						h5 {
+							margin-bottom: 1.3rem;
+							font-size: 1.8rem;
+							font-weight: 600;
+						}
+						p {
+							font-weight: light;
+							letter-spacing: 0.1rem;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.qualities {
+	}
+	.contact-form {
+		display: none;
+	}
+}
