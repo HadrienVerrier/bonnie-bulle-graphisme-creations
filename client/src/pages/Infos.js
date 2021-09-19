@@ -86,6 +86,7 @@ const Infos = () => {
 				</section>
 			</article>
 			<article className="contact-form">
+				<h2>Contactez-moi</h2>
 				<form>
 					<div className="row">
 						<label>
@@ -107,18 +108,21 @@ const Infos = () => {
 							/>
 						</label>
 					</div>
-					<label htmlFor="message">Message</label>
-					<textarea
-						name="message"
-						id="message"
-						placeholder="Rédigez votre message ici..."
-					></textarea>
-
-					<label>
-						Envoyer
+					<div className="row">
+						<label>
+							<span>Message</span>
+							<textarea
+								name="message"
+								id="message"
+								placeholder="Rédigez votre message ici..."
+							></textarea>
+						</label>
+					</div>
+					<div className="row">
 						<input type="submit" value="envoyer" />
-					</label>
-					<div className="succes-message">Merci pour votre envoi !</div>
+					</div>
+
+					<div className="success-message">Merci pour votre message !</div>
 				</form>
 			</article>
 		</section>
