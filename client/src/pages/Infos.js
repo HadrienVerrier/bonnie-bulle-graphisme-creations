@@ -85,7 +85,11 @@ const Infos = () => {
 					</p>
 				</section>
 			</article>
-			<article className="contact-form">
+			<article
+				className="contact-form"
+				action="#"
+				onSubmit={(e) => e.preventDefault()}
+			>
 				<h2>Contactez-moi</h2>
 				<form>
 					<div className="row">

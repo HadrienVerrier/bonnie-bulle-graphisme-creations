@@ -1,0 +1,106 @@
+.gallery {
+	margin-top: 5rem;
+
+	.modal {
+		visibility: hidden;
+		opacity: 0;
+		position: fixed;
+		z-index: 1;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(0.8);
+		width: calc(100% - #{$paddingModal});
+		height: calc(100% - #{$paddingModal});
+		max-width: 100vw;
+		max-height: 100vh;
+		padding: $paddingModal;
+		background-color: rgba($white, 0.8);
+
+		transition: all 0.3s;
+		&.display {
+			visibility: visible;
+			opacity: 1;
+			transform: translate(-50%, -50%) scale(1);
+			transition: all 0.3s;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+		svg {
+			fill: $black;
+			position: fixed;
+			z-index: 3;
+			top: $paddingModal;
+			right: $paddingModal * 2;
+			transform: scale(1.5);
+			cursor: pointer;
+
+			transition: all 0.1s;
+			&:hover {
+				transform: scale(1.8);
+				transition: all 0.1s;
+			}
+		}
+	}
+	.my-masonry-grid {
+		display: flex;
+		margin-left: -$gutter; /* gutter size offset */
+		width: auto;
+
+		.my-masonry-grid_column {
+			padding-left: $gutter; /* gutter size */
+			background-clip: padding-box;
+			picture {
+				cursor: pointer;
+				position: relative;
+				/* change div to reference your elements you put in <Masonry> */
+				max-width: 100%;
+				display: block;
+				img {
+					max-width: 100%;
+					object-fit: cover;
+				}
+				margin-bottom: $gutter;
+				&::before {
+					content: "";
+					display: block;
+					background-color: lighten($pink, 15%);
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					transform: scale(0.9);
+					transition: all 0.4s;
+				}
+
+				h3 {
+					position: absolute;
+					top: 1rem;
+					left: 1rem;
+					font-size: 3rem;
+					font-weight: 500;
+					padding: 2rem;
+					opacity: 0;
+					transition: all 0.4s;
+				}
+
+				&:hover {
+					h3 {
+						opacity: 1;
+
+						transition: all 0.4s;
+					}
+					&::before {
+						transform: scale(1);
+						opacity: 1;
+						transition: all 0.4s;
+					}
+				}
+			}
+		}
+	}
+}

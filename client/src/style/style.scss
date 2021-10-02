@@ -28,6 +28,9 @@ body {
 
 		//PAGES
 		@import "./pages/infos";
+
+		//COMPONENT
+		@import "./components/gallery";
 	}
 
 	// GLOBALS
@@ -57,7 +60,7 @@ body {
 
 	//CLASSES
 	.container {
-		width: 70%;
+		width: 80%;
 		margin: auto;
 	}
 }

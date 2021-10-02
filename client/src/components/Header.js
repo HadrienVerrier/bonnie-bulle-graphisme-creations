@@ -37,7 +37,7 @@ const Header = () => {
 				<ul>
 					<li>
 						<a
-							href="www.facebook.com"
+							href="https://facebook.com/lapetitebullette-100920915147903"
 							title="Mon Facebook"
 							target="_blank"
 							rel="noopener noreferrer"
@@ -54,7 +54,7 @@ const Header = () => {
 					</li>
 					<li>
 						<a
-							href="www.instagram.com"
+							href="https://www.instagram.com/lapetitebullette"
 							title="Mon Insta"
 							target="_blank"
 							rel="noopener noreferrer"
