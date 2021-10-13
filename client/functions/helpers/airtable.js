@@ -1,11 +1,11 @@
 require("dotenv").config();
 
-import Airtable from "airtable";
+var Airtable = require("airtable");
 var base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(
 	process.env.AIRTABLE_BASE_ID
 );
 
-const images = base("images");
-const creations = base("creations");
+const imagesTable = base("images");
+const creationsTable = base("creations");
 
-export default { images, creations };
+module.exports = { imagesTable, creationsTable };

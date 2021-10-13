@@ -1,6 +1,6 @@
 import React from "react";
 import {
-	HashRouter as Router,
+	BrowserRouter as Router,
 	Route,
 	Switch,
 	Redirect,
@@ -13,7 +13,7 @@ import Infos from "../pages/Infos";
 
 const Routes = () => {
 	return (
-		<Router basename="/" hashType="slash">
+		<Router>
 			<Header />
 			<main className="body-page">
 				<Switch>
