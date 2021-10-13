@@ -1,38 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 
 import Masonry from "react-masonry-css";
 import LazyImage from "../components/LazyImage";
 import { isEmpty } from "../tools/Fonctions";
 
-const Illustrations = () => {
-	const [illustrations, setIllustrations] = useState(null);
-	//GET ILLUSTRATIONS
-	useEffect(() => {
-		fetch(
-			"/api/server?" +
-				new URLSearchParams({
-					table: "creations",
-					query: "illustrations",
-				}),
-			{
-				method: "GET",
-			}
-		)
-			.then(function (response) {
-				if (!response.ok) {
-					throw new Error(`erreur HTTP! statut: ${response.status}`);
-				}
-				return response.json();
-			})
-			.then((data) => {
-				return setIllustrations(data);
-			})
-
-			.catch(function (err) {
-				console.log("Fetch Error :", err);
-			});
-	}, []);
-
+const Gallery = ({ elements }) => {
 	let modal = useRef(null);
 	const handleModal = (element) => {
 		let imgModal = modal.current.childNodes[0];
@@ -72,22 +44,22 @@ const Illustrations = () => {
 				className="my-masonry-grid"
 				columnClassName="my-masonry-grid_column"
 			>
-				{!isEmpty(illustrations) &&
-					illustrations.map((illustration) => {
+				{!isEmpty(elements) &&
+					elements.map((element) => {
 						return (
 							<LazyImage
-								key={illustration.id}
-								id={illustration.id}
+								key={element.id}
+								id={element.id}
 								onClick={(e) => {
 									handleModal(e.currentTarget);
 								}}
-								name={illustration.name}
-								title={illustration.name}
-								alt={illustration.imgsDescription[0]}
-								src={illustration.imgsPaths[0].url}
-								thumb={illustration.imgsPaths[0].thumbnails.small.url}
-								height={illustration.imgsPaths[0].height}
-								width={illustration.imgsPaths[0].width}
+								name={element.name}
+								title={element.name}
+								alt={element.imgsDescription[0]}
+								src={element.imgsPaths[0].url}
+								thumb={element.imgsPaths[0].thumbnails.small.url}
+								height={element.imgsPaths[0].height}
+								width={element.imgsPaths[0].width}
 							/>
 						);
 					})}
@@ -96,4 +68,4 @@ const Illustrations = () => {
 	);
 };
 
-export default Illustrations;
+export default Gallery;
