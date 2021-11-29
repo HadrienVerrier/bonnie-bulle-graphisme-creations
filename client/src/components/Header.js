@@ -17,7 +17,11 @@ const Header = () => {
 						</NavLink>
 					</li>
 					<li>
-						<NavLink exact to="/galerie/design-graphique" activeClassName="active">
+						<NavLink
+							exact
+							to="/galerie/design-graphique"
+							activeClassName="active"
+						>
 							Design graphique
 						</NavLink>
 					</li>
