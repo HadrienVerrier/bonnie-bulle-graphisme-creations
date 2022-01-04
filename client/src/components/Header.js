@@ -1,7 +1,16 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { isEmpty } from "../tools/Fonctions";
 
 const Header = () => {
+	const illustrations = useSelector(
+		(state) => state.imagesReducer.illustrationsReducer
+	);
+	const graphicDesigns = useSelector(
+		(state) => state.imagesReducer.graphicDesignReducer
+	);
+
 	return (
 		<header className="header">
 			<h1>
@@ -16,20 +25,29 @@ const Header = () => {
 							Accueil
 						</NavLink>
 					</li>
-					<li>
-						<NavLink
-							exact
-							to="/galerie/design-graphique"
-							activeClassName="active"
-						>
-							Design graphique
-						</NavLink>
-					</li>
-					<li>
-						<NavLink exact to="/galerie/illustration" activeClassName="active">
-							Illustration
-						</NavLink>
-					</li>
+					{!isEmpty(graphicDesigns) && (
+						<li>
+							<NavLink
+								exact
+								to="/galerie/design-graphique"
+								activeClassName="active"
+							>
+								Design graphique
+							</NavLink>
+						</li>
+					)}
+					{!isEmpty(illustrations) && (
+						<li>
+							<NavLink
+								exact
+								to="/galerie/illustration"
+								activeClassName="active"
+							>
+								Illustration
+							</NavLink>
+						</li>
+					)}
+
 					<li>
 						<NavLink exact to="/infos" activeClassName="active">
 							Infos

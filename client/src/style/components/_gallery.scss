@@ -52,6 +52,9 @@
 		.my-masonry-grid_column {
 			padding-left: $gutter; /* gutter size */
 			background-clip: padding-box;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 			picture {
 				cursor: pointer;
 				position: relative;
