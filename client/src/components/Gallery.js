@@ -42,7 +42,7 @@ const Gallery = ({ elements }) => {
       <Masonry
         breakpointCols={3}
         className="my-masonry-grid"
-        columnClassName="my-masonry-grid_column "
+        columnClassName="my-masonry-grid_column"
       >
         {!isEmpty(elements) &&
           elements.map((element) => {
