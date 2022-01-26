@@ -2,59 +2,59 @@ import React from "react";
 import Form from "../components/Form";
 
 const Infos = () => {
-	return (
-		<section className="infos container">
-			<article className="bio">
-				<section className="column">
-					<h2>Bonnie BULLE</h2>
-					<h3>Designer graphique basée à Nice</h3>
-					<p className="container">
-						<strong>Étudiante en 3ème année de DNMADE graphisme </strong>au
-						lycée René Goscinny de DRAP (06), je suis passionnée de design et
-						d'illustration.
-					</p>
-				</section>
-				<picture className="column">
-					<img
-						src="/img/illustration/Photo_De_Profil (2).jpg"
-						alt="dessin de rofil"
-						width="50"
-					/>
-				</picture>
-			</article>
-			<article className="cv">
-				<section className="realisations">
-					<h4>Réalisations</h4>
-					<ul>
-						<li>Logo</li>
-						<li>Affiche</li>
-						<li>Carte de Visite</li>
-						<li>Pictogrammes</li>
-						<li>Signalétique</li>
-						<li>Édition</li>
-						<li>Mise en page</li>
-						<li>Illustration</li>
-					</ul>
-				</section>
-				<section className="studies">
-					<h4>Études</h4>
-					<ul>
-						<li>
-							<h5>2019-2022</h5>
-							<p>DNMADE graphisme (Drap)</p>
-						</li>
-						<li>
-							<h5>2018-2019</h5>
-							<p>Licence 1 Histoire de l'art (Toulouse)</p>
-						</li>
-						<li>
-							<h5>2017-2018</h5>
-							<p>MANAA à la Grande Tourrache (La Garde)</p>
-						</li>
-					</ul>
-				</section>
-			</article>
-			<article className="qualities">
+  return (
+    <section className="infos container">
+      <article className="bio">
+        <section className="column">
+          <h2>Bonnie BULLE</h2>
+          <h3>Designer graphique basée à Nice</h3>
+          <p className="container">
+            <strong>Étudiante en 3ème année de DNMADE graphisme </strong>au
+            lycée René Goscinny de DRAP (06), je suis passionnée de design et
+            d'illustration.
+          </p>
+        </section>
+        <picture className="column">
+          <img
+            src="/img/illustration/Photo_De_Profil (2).jpg"
+            alt="dessin de rofil"
+            width="50"
+          />
+        </picture>
+      </article>
+      <article className="cv">
+        <section className="realisations">
+          <h4>Réalisations</h4>
+          <ul>
+            <li>Logo</li>
+            <li>Affiche</li>
+            <li>Carte de Visite</li>
+            <li>Pictogrammes</li>
+            <li>Signalétique</li>
+            <li>Édition</li>
+            <li>Mise en page</li>
+            <li>Illustration</li>
+          </ul>
+        </section>
+        <section className="studies">
+          <h4>Études</h4>
+          <ul>
+            <li>
+              <h5>2019-2022</h5>
+              <p>DNMADE graphisme (Drap)</p>
+            </li>
+            <li>
+              <h5>2018-2019</h5>
+              <p>Licence 1 Histoire de l'art (Toulouse)</p>
+            </li>
+            <li>
+              <h5>2017-2018</h5>
+              <p>MANAA à la Grande Tourrache (La Garde)</p>
+            </li>
+          </ul>
+        </section>
+      </article>
+      {/* <article className="qualities">
 				<section className="card">
 					<img
 						src="/img/decorations/Patter_main_bandeau.jpg"
@@ -97,10 +97,10 @@ const Infos = () => {
 						repellat?
 					</p>
 				</section>
-			</article>
-			<Form />
-		</section>
-	);
+			</article> */}
+      <Form />
+    </section>
+  );
 };
 
 export default Infos;

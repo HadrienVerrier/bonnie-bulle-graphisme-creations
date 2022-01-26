@@ -1,208 +1,158 @@
 .infos {
-	> article {
-		border-bottom: 0.1px rgba(128, 128, 128, 0.39) solid;
-		padding-bottom: 3rem;
-		&:not(:first-of-type) {
-			margin-top: 3rem;
-		}
-	}
-	.bio {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		.column {
-			width: 80%;
-			margin: 3rem auto;
-		}
+  > article {
+    border-bottom: 0.1px rgba(128, 128, 128, 0.39) solid;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    &:not(:first-of-type) {
+      margin-top: 3rem;
+    }
+  }
+  .bio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 0rem;
+    .column {
+      width: 80%;
+      margin: 3rem auto;
+    }
 
-		h2 {
-			font-size: 2.5rem;
-			letter-spacing: 1.4rem;
-			font-weight: 500;
-		}
-		h3 {
-			font-weight: lighter;
-			margin: 1.2rem auto 5rem;
-		}
-		p {
-			line-height: 3rem;
-		}
-		picture {
-			img {
-				border-radius: 50%;
-				width: calc(100% - 10rem);
-				max-width: 50rem;
-				margin: 5rem;
-			}
-		}
-	}
+    h2 {
+      font-size: 2.5rem;
+      letter-spacing: 1.4rem;
+      font-weight: 500;
+    }
+    h3 {
+      font-weight: lighter;
+      margin: 1.2rem auto 5rem;
+    }
+    p {
+      line-height: 3rem;
+    }
+    picture {
+      img {
+        border-radius: 50%;
+        width: calc(100% - 10rem);
+        max-width: 50rem;
+        margin: 5rem;
+      }
+    }
+  }
 
-	.cv {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-		section {
-			margin: 0 8rem;
-			h4 {
-				font-size: 2.5rem;
-				font-weight: 500;
-				margin-bottom: 4rem;
-			}
+  .cv {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    section {
+      margin: 0 8rem;
+      h4 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin-bottom: 4rem;
+      }
 
-			&.realisations {
-				ul {
-					margin-left: 2rem;
-					li {
-						margin-bottom: 3rem;
-						position: relative;
-						&::before {
-							content: "✹";
+      &.realisations {
+        ul {
+          margin-left: 2rem;
+          li {
+            margin-bottom: 3rem;
+            position: relative;
+            line-height: 3rem;
+            &::before {
+              content: "✹";
 
-							position: absolute;
-							left: -2.8rem;
-							top: -0.5rem;
-							font-size: 2.5rem;
-						}
-					}
-				}
-			}
-			&.studies {
-				ul {
-					li {
-						margin-bottom: 5rem;
-						h5 {
-							margin-bottom: 1.3rem;
-							font-size: 1.8rem;
-							font-weight: 600;
-						}
-						p {
-							font-weight: light;
-							letter-spacing: 0.1rem;
-						}
-					}
-				}
-			}
-		}
-	}
+              position: absolute;
+              left: -2.8rem;
+              top: -0.5rem;
+              font-size: 2.5rem;
+            }
+          }
+        }
+      }
+      &.studies {
+        ul {
+          li {
+            margin-bottom: 5rem;
+            line-height: 2rem;
+            h5 {
+              margin-bottom: 1.3rem;
+              font-size: 1.8rem;
+              font-weight: 600;
+            }
+            p {
+              font-weight: light;
+              letter-spacing: 0.1rem;
+              line-height: 2.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
 
-	.qualities {
-		display: flex;
-		justify-content: space-evenly;
-		position: relative;
-		.card {
-			margin: 0 2rem;
-			max-width: 40rem;
-			position: relative;
-			text-align: center;
-			img {
-				width: 100%;
+  .qualities {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    .card {
+      margin: 0 2rem;
+      max-width: 40rem;
+      position: relative;
+      text-align: center;
+      img {
+        width: 100%;
 
-				height: 35rem;
-				object-fit: cover;
-				margin-bottom: 3rem;
-			}
+        height: 35rem;
+        object-fit: cover;
+        margin-bottom: 3rem;
+      }
 
-			h4 {
-				position: absolute;
-				top: 33rem;
-				left: 50%;
+      h4 {
+        position: absolute;
+        top: 33rem;
+        left: 50%;
 
-				height: 4rem;
-				width: 15rem;
-				font-size: 2rem;
-				background-color: $pink;
-				color: $white !important;
-				line-height: 4rem;
-				letter-spacing: 0.5rem;
-				transform: translateX(-50%);
-			}
+        height: 4rem;
+        width: 15rem;
+        font-size: 2rem;
+        background-color: $pink;
+        color: $white !important;
+        line-height: 4rem;
+        letter-spacing: 0.5rem;
+        transform: translateX(-50%);
+      }
 
-			h2 {
-				font-size: 3rem;
-				letter-spacing: 0.4rem;
-				font-weight: 500;
-				margin-bottom: 1rem;
-			}
+      h2 {
+        font-size: 3rem;
+        letter-spacing: 0.4rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
 
-			p {
-				width: 70%;
-				margin: auto;
-				font-size: 1.6rem;
-				font-weight: light;
-				line-height: 2rem;
-				letter-spacing: 0.1rem;
-			}
-		}
-	}
-	.contact-form {
-		width: 60%;
-		margin: auto;
-		h2 {
-			text-align: center;
-			font-size: 3rem;
-			margin-bottom: 4rem;
-		}
-		.row {
-			display: flex;
-			justify-content: space-between;
-			margin-bottom: 2rem;
-			label {
-				display: flex;
-				flex-direction: column;
-				width: 100%;
+      p {
+        width: 70%;
+        margin: auto;
+        font-size: 1.6rem;
+        font-weight: light;
+        line-height: 2rem;
+        letter-spacing: 0.1rem;
+      }
+    }
+  }
 
-				max-width: 50rem;
-				&:nth-of-type(2) {
-					input {
-						margin-left: auto;
-					}
-					span {
-						margin-left: auto;
-					}
-				}
-				span {
-					margin-bottom: 1rem;
-					width: calc(80% + 2rem);
-					font-weight: bolder;
-					font-size: 1.5rem;
-					letter-spacing: 0.3rem;
-				}
-				input {
-					width: 80%;
-				}
-				textarea {
-					resize: none;
-					min-height: 10rem;
-				}
-				textarea,
-				input {
-					padding: 1rem;
-					border: none;
-					background-color: lighten($pink, 21%);
-					&::placeholder {
-						color: $pink;
-						font-family: $lato;
-					}
-				}
-			}
-			input[type="submit"] {
-				margin: auto;
-				background-color: transparent;
-				border: lighten($black, 10%) 0.3rem solid;
-				border-radius: 0;
-				padding: 1rem 6rem;
-				text-transform: uppercase;
-				font-family: $roboto;
-				font-weight: bolder;
-				font-size: 1.8rem;
-				letter-spacing: 0.3rem;
-			}
-		}
+  @import "../components/infos/form";
 
-		.success-message {
-			text-align: center;
-			display: none;
-		}
-	}
+  @media screen and (max-width: 1250px) {
+    .bio {
+      flex-direction: column-reverse;
+
+      picture {
+        img {
+          width: calc(100% - 18rem);
+          margin: 0rem;
+        }
+      }
+    }
+  }
 }
