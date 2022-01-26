@@ -11,19 +11,22 @@ import { composeWithDevTools } from "redux-devtools-extension";
 
 import rootReducer from "./reducers/";
 import { getGraphicDesign, getIllustrations } from "./actions/images.action";
+import { getUser } from "./actions/user.actions";
 
 const store = createStore(
-	rootReducer,
-	composeWithDevTools(applyMiddleware(thunk))
+  rootReducer,
+  composeWithDevTools(applyMiddleware(thunk))
 );
 
 store.dispatch(getGraphicDesign());
 store.dispatch(getIllustrations());
+store.dispatch(getUser());
+
 ReactDOM.render(
-	<React.StrictMode>
-		<Provider store={store}>
-			<App />
-		</Provider>
-	</React.StrictMode>,
-	document.getElementById("root")
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById("root")
 );

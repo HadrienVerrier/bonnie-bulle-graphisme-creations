@@ -31,6 +31,10 @@
       line-height: 3rem;
     }
     picture {
+      background-color: unset;
+      h3 {
+        display: none;
+      }
       img {
         border-radius: 50%;
         width: calc(100% - 10rem);

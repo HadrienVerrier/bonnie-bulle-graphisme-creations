@@ -1,27 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
 import Form from "../components/Form";
+import LazyImage from "../components/LazyImage";
 
 const Infos = () => {
+  const user = useSelector((state) => state.userReducer);
+  useEffect(() => {
+    console.log(user);
+  }, [user]);
   return (
     <section className="infos container">
-      <article className="bio">
-        <section className="column">
-          <h2>Bonnie BULLE</h2>
-          <h3>Designer graphique basée à Nice</h3>
-          <p className="container">
-            <strong>Étudiante en 3ème année de DNMADE graphisme </strong>au
-            lycée René Goscinny de DRAP (06), je suis passionnée de design et
-            d'illustration.
-          </p>
-        </section>
-        <picture className="column">
-          <img
-            src="/img/illustration/Photo_De_Profil (2).jpg"
-            alt="dessin de rofil"
-            width="50"
+      {user && (
+        <article className="bio">
+          <section className="column">
+            <h2>{user.name}</h2>
+            <h3>Designer graphique basée à Nice</h3>
+            <p className="container">
+              <strong>Étudiante en 3ème année de DNMADE graphisme </strong>au
+              lycée René Goscinny de DRAP (06), je suis passionnée de design et
+              d'illustration.
+            </p>
+          </section>
+          <LazyImage
+            className="column"
+            name={user.pictureArray[0].filename}
+            title={user.pictureArray[0].filename}
+            alt={user.pictureArray[0].filename}
+            src={user.pictureArray[0].url}
+            thumb={user.pictureArray[0].thumbnails.small.url}
+            height={user.pictureArray[0].height}
+            width={user.pictureArray[0].width}
           />
-        </picture>
-      </article>
+        </article>
+      )}
+
       <article className="cv">
         <section className="realisations">
           <h4>Réalisations</h4>

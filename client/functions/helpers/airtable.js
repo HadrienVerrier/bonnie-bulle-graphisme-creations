@@ -6,5 +6,6 @@ var base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(
 const imagesTable = base("images");
 const creationsTable = base("creations");
 const messageTable = base("message");
+const userTable = base("user");
 
-module.exports = { imagesTable, creationsTable, messageTable };
+module.exports = { imagesTable, creationsTable, messageTable, userTable };
