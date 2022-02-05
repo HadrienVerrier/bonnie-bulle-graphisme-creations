@@ -5,9 +5,6 @@ import LazyImage from "../components/LazyImage";
 
 const Infos = () => {
   const user = useSelector((state) => state.userReducer);
-  useEffect(() => {
-    console.log(user);
-  }, [user]);
   return (
     <section className="infos container">
       {user && (
