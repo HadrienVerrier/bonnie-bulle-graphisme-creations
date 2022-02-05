@@ -60,4 +60,15 @@ header.header {
       }
     }
   }
+
+  @media screen and (max-width: 650px) {
+    aside {
+      top: -6rem;
+      right: 1.5rem;
+      ul {
+        flex-direction: row !important;
+        gap: 1rem;
+      }
+    }
+  }
 }

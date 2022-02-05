@@ -18,6 +18,12 @@ const Gallery = ({ elements }) => {
     modal.current.classList.remove("display");
   };
 
+  const breakPointColumnsObj = {
+    default: 3,
+    900: 2,
+    600: 1,
+  };
+
   return (
     <section className="illustration container gallery">
       <picture className="modal" ref={modal}>
@@ -40,7 +46,7 @@ const Gallery = ({ elements }) => {
         </svg>
       </picture>
       <Masonry
-        breakpointCols={3}
+        breakpointCols={breakPointColumnsObj}
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
       >

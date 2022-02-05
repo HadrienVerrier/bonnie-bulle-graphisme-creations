@@ -1,4 +1,5 @@
 .infos {
+  max-width: 50%;
   > article {
     border-bottom: 0.1px rgba(128, 128, 128, 0.39) solid;
     padding-bottom: 3rem;
@@ -6,6 +7,9 @@
     &:not(:first-of-type) {
       margin-top: 3rem;
     }
+  }
+  > article:last-of-type {
+    border-bottom: unset;
   }
   .bio {
     display: flex;
@@ -47,9 +51,7 @@
   .cv {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     section {
-      margin: 0 8rem;
       h4 {
         font-size: 2.5rem;
         font-weight: 500;
@@ -68,7 +70,7 @@
 
               position: absolute;
               left: -2.8rem;
-              top: -0.5rem;
+              // top: -0.5rem;
               font-size: 2.5rem;
             }
           }
@@ -148,6 +150,7 @@
   @import "../components/infos/form";
 
   @media screen and (max-width: 1250px) {
+    max-width: 75%;
     .bio {
       flex-direction: column-reverse;
 
@@ -156,6 +159,29 @@
           width: calc(100% - 18rem);
           margin: 0rem;
         }
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    max-width: 95%;
+
+    .cv {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      .realisations {
+        li {
+          text-align: left;
+          margin-bottom: 2rem !important;
+          &::before {
+            top: 0 !important;
+          }
+        }
+        margin-bottom: 5rem;
+        padding-bottom: 3rem;
+        border-bottom: 0.1px rgba(128, 128, 128, 0.39) solid;
       }
     }
   }
