@@ -2,18 +2,18 @@ const { messageTable } = require("../airtable");
 
 module.exports = async (event) => {
   const { identity, email, message } = event.queryStringParameters;
-  messageTable.create(
-    [
+  let res = messageTable
+    .create([
       {
         fields: { author: identity, email: email, message: message },
       },
-    ],
-    (err, records) => {
-      if (err) {
-        return "error";
-      }
+    ])
+    .then((res) => {
       return "success";
-    }
-  );
-  return "success";
+    })
+    .catch((err) => {
+      return err;
+    });
+
+  return res;
 };
